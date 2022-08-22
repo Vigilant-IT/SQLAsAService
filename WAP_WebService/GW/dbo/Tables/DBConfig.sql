@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[DBConfig]
+(
+	[IDDB] INT NOT NULL PRIMARY KEY, 
+    [Connstring] VARCHAR(MAX) NOT NULL, 
+    [SQLUser] VARCHAR(MAX) NOT NULL
+)

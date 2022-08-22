@@ -1,0 +1,10 @@
+﻿/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT distinct *  FROM backupdevicesettings as bd full join 
+[dbo].[dbaogsettings] as aog on bd.serverid = aog.serverid full join
+[dbo].[dbfilesettings] as dbfile on bd.serverid = dbfile.ServerID full join
+[dbo].[dbresgovsettings] as resgov on bd.serverid = resgov.serverid full join
+[dbo].[mountpointsettings] as mp on bd.serverid = mp.serverid full join
+[dbo].[plansettings] as pln on bd.serverid = pln.serverid full join 
+[dbo].[subsettings] as sub on bd.serverid = sub.serverid full join
+[dbo].[vhdxsettings] as vhdx on bd.serverid = vhdx.serverid full join
+[dbo].[vmmdisksettings] as vmmdisk on bd.serverid = vmmdisk.serverid

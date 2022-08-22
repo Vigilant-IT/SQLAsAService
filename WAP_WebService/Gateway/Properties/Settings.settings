@@ -1,0 +1,72 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Gateway.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="dbconn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server=SQLAAS.LAB;Integrated Security = True</Value>
+    </Setting>
+    <Setting Name="loglevel" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Standard</Value>
+    </Setting>
+    <Setting Name="logfile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\temp</Value>
+    </Setting>
+    <Setting Name="authserver" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://SQLAAS.LAB:30072</Value>
+    </Setting>
+    <Setting Name="adminserver" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://SQLAAS.LAB:30004</Value>
+    </Setting>
+    <Setting Name="adfs" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="tenantserver" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://SQLAAS.LAB:30005</Value>
+    </Setting>
+    <Setting Name="prodshare" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\SQLAAS.LAB\PROD</Value>
+    </Setting>
+    <Setting Name="nonprodshare" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\SQLAAS.LAB\NONPROD</Value>
+    </Setting>
+    <Setting Name="checkinterval" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="securitygrpshareaccess" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SQLAAS\SQLGRP1;SQLAAS\SQLGRP2</Value>
+    </Setting>
+    <Setting Name="signedcert" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="timerlogfile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\temp\SQLaaSLog_Timer.log</Value>
+    </Setting>
+    <Setting Name="GWSQLSRV" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SQLAAS.LAB</Value>
+    </Setting>
+    <Setting Name="GWDBNAME" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">GW</Value>
+    </Setting>
+    <Setting Name="DNSProd" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SQLaaS.LAB</Value>
+    </Setting>
+    <Setting Name="DNSNonProd" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SQLaaS.LAB</Value>
+    </Setting>
+    <Setting Name="DNSServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">WIN-MN12OVPJD39.sqlaas.lab</Value>
+    </Setting>
+    <Setting Name="MDFPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\DB</Value>
+    </Setting>
+    <Setting Name="LDFPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\DB</Value>
+    </Setting>
+    <Setting Name="PoSHKerbCheck" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="RDGSecGroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SLG-SQLaaS-RDS-Users</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

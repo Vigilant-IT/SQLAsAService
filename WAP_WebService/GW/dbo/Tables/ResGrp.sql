@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[ResGrp]
+(
+	[ResGrpID] INT NOT NULL PRIMARY KEY, 
+    [ResGrpName] VARCHAR(MAX) NOT NULL, 
+    [ServerID] VARCHAR(MAX) NOT NULL, 
+    [SKUID] INT NOT NULL, 
+    [PassPhrase] VARCHAR(MAX) NULL
+)

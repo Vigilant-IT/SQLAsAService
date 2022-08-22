@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>GW</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{fccae42e-06a5-4e99-a307-e4f9f626eaae}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>GW</RootNamespace>
+    <AssemblyName>GW</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\AOSpec.sql" />
+    <Build Include="dbo\Tables\Audit.sql" />
+    <Build Include="dbo\Tables\backupdevicesettings.sql" />
+    <Build Include="dbo\Tables\Billing_Details.sql" />
+    <Build Include="dbo\Tables\Billing_Schedule.sql" />
+    <Build Include="dbo\Tables\Codes.sql" />
+    <Build Include="dbo\Tables\dbaogsettings.sql" />
+    <Build Include="dbo\Tables\dbfilesettings.sql" />
+    <Build Include="dbo\Tables\dbresgovsettings.sql" />
+    <Build Include="dbo\Tables\DBSettings.sql" />
+    <Build Include="dbo\Tables\mountpointsettings.sql" />
+    <Build Include="dbo\Tables\NameSpec.sql" />
+    <Build Include="dbo\Tables\NameUsed.sql" />
+    <Build Include="dbo\Tables\plansettings.sql" />
+    <Build Include="dbo\Tables\StorSpec_Old.sql" />
+    <Build Include="dbo\Tables\StorUsed.sql" />
+    <Build Include="dbo\Tables\StorUsed_Old.sql" />
+    <Build Include="dbo\Tables\subsettings.sql" />
+    <Build Include="dbo\Tables\vhdxsettings.sql" />
+    <Build Include="dbo\Tables\vmmdisksettings.sql" />
+    <Build Include="dbo\Tables\VMSpec.sql" />
+    <Build Include="dbo\Tables\VMUsed.sql" />
+    <Build Include="dbo\Views\view_Audit.sql" />
+    <Build Include="dbo\Views\view_DBNames.sql" />
+    <Build Include="dbo\Tables\RGAllocation.sql" />
+    <Build Include="dbo\Tables\RGConfig.sql" />
+    <Build Include="dbo\Tables\SKUConfig.sql" />
+    <Build Include="dbo\Tables\RGRequests.sql" />
+    <Build Include="dbo\Tables\RGJob.sql" />
+    <Build Include="dbo\Tables\RgVhdx.sql" />
+    <Build Include="dbo\Tables\DBRequests.sql" />
+    <Build Include="dbo\Tables\DBJob.sql" />
+    <Build Include="dbo\Tables\DBConfig.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="GW.refactorlog" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,280 @@
+﻿USE [GW]
+GO
+
+/****** Object:  Table [dbo].[backupdevicesettings]    Script Date: 30/01/2016 4:57:01 PM ******/
+DROP TABLE [dbo].[backupdevicesettings]
+GO
+
+/****** Object:  Table [dbo].[backupdevicesettings]    Script Date: 30/01/2016 4:57:01 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[backupdevicesettings](
+	[serverid] [varchar](256) NOT NULL,
+	[name] [varchar](256) NULL,
+	[path] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+USE [GW]
+GO
+
+/****** Object:  Table [dbo].[dbaogsettings]    Script Date: 30/01/2016 4:57:13 PM ******/
+DROP TABLE [dbo].[dbaogsettings]
+GO
+
+/****** Object:  Table [dbo].[dbaogsettings]    Script Date: 30/01/2016 4:57:13 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[dbaogsettings](
+	[serverid] [varchar](256) NOT NULL,
+	[dbname] [varchar](256) NULL,
+	[dns] [varchar](256) NULL,
+	[ipaddress] [varchar](256) NULL,
+	[ipmask] [varchar](256) NULL,
+	[name] [varchar](256) NULL,
+	[port] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+USE [GW]
+GO
+
+/****** Object:  Table [dbo].[dbfilesettings]    Script Date: 30/01/2016 4:57:25 PM ******/
+DROP TABLE [dbo].[dbfilesettings]
+GO
+
+/****** Object:  Table [dbo].[dbfilesettings]    Script Date: 30/01/2016 4:57:25 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[dbfilesettings](
+	[ServerID] [varchar](50) NOT NULL,
+	[dbname] [varchar](256) NULL,
+	[name] [varchar](256) NULL,
+	[path] [varchar](256) NULL,
+	[size] [varchar](256) NULL,
+	[timestamp] [datetime] NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [GW]
+GO
+
+/****** Object:  Table [dbo].[dbresgovsettings]    Script Date: 30/01/2016 4:57:34 PM ******/
+DROP TABLE [dbo].[dbresgovsettings]
+GO
+
+/****** Object:  Table [dbo].[dbresgovsettings]    Script Date: 30/01/2016 4:57:34 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[dbresgovsettings](
+	[serverid] [varchar](256) NOT NULL,
+	[capcpu] [varchar](256) NULL,
+	[maxcpu] [varchar](256) NULL,
+	[maxmem] [varchar](256) NULL,
+	[maxmempool] [varchar](256) NULL,
+	[minmempool] [varchar](256) NULL,
+	[name] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [GW]
+GO
+
+/****** Object:  Table [dbo].[mountpointsettings]    Script Date: 30/01/2016 4:57:49 PM ******/
+DROP TABLE [dbo].[mountpointsettings]
+GO
+
+/****** Object:  Table [dbo].[mountpointsettings]    Script Date: 30/01/2016 4:57:49 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[mountpointsettings](
+	[serverid] [varchar](256) NOT NULL,
+	[name] [varchar](256) NULL,
+	[path] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [GW]
+GO
+
+/****** Object:  Table [dbo].[plansettings]    Script Date: 30/01/2016 4:58:01 PM ******/
+DROP TABLE [dbo].[plansettings]
+GO
+
+/****** Object:  Table [dbo].[plansettings]    Script Date: 30/01/2016 4:58:01 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[plansettings](
+	[serverid] [varchar](256) NOT NULL,
+	[planid] [varchar](256) NULL,
+	[displayname] [varchar](256) NULL,
+	[state] [varchar](256) NULL,
+	[subcount] [varchar](256) NULL,
+	[timestamp] [datetime] NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [GW]
+GO
+
+/****** Object:  Table [dbo].[subsettings]    Script Date: 30/01/2016 4:58:15 PM ******/
+DROP TABLE [dbo].[subsettings]
+GO
+
+/****** Object:  Table [dbo].[subsettings]    Script Date: 30/01/2016 4:58:15 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[subsettings](
+	[serverid] [varchar](256) NOT NULL,
+	[name] [varchar](256) NULL,
+	[state] [varchar](256) NULL,
+	[planid] [varchar](256) NULL,
+	[subid] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [GW]
+GO
+
+/****** Object:  Table [dbo].[vhdxsettings]    Script Date: 30/01/2016 4:58:24 PM ******/
+DROP TABLE [dbo].[vhdxsettings]
+GO
+
+/****** Object:  Table [dbo].[vhdxsettings]    Script Date: 30/01/2016 4:58:24 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[vhdxsettings](
+	[serverid] [varchar](256) NOT NULL,
+	[name] [varchar](256) NULL,
+	[size] [varchar](256) NULL,
+	[host] [varchar](256) NULL,
+	[path] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+USE [GW]
+GO
+
+/****** Object:  Table [dbo].[vmmdisksettings]    Script Date: 30/01/2016 4:58:31 PM ******/
+DROP TABLE [dbo].[vmmdisksettings]
+GO
+
+/****** Object:  Table [dbo].[vmmdisksettings]    Script Date: 30/01/2016 4:58:31 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[vmmdisksettings](
+	[serverid] [varchar](256) NOT NULL,
+	[diskname] [varchar](256) NULL,
+	[size] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+

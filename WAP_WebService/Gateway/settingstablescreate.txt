@@ -1,0 +1,111 @@
+﻿USE [GW]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[backupdevicesettings](
+	[serverid] [varchar](256) NOT NULL,
+	[name] [varchar](256) NULL,
+	[path] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+CREATE TABLE [dbo].[dbaogsettings](
+	[serverid] [varchar](256) NOT NULL,
+	[dbname] [varchar](256) NULL,
+	[dns] [varchar](256) NULL,
+	[ipaddress] [varchar](256) NULL,
+	[ipmask] [varchar](256) NULL,
+	[name] [varchar](256) NULL,
+	[port] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+CREATE TABLE [dbo].[dbfilesettings](
+	[ServerID] [varchar](50) NOT NULL,
+	[dbname] [varchar](256) NULL,
+	[name] [varchar](256) NULL,
+	[path] [varchar](256) NULL,
+	[size] [varchar](256) NULL,
+	[timestamp] [datetime] NULL
+) ON [PRIMARY]
+
+GO
+
+CREATE TABLE [dbo].[dbresgovsettings](
+	[serverid] [varchar](256) NOT NULL,
+	[capcpu] [varchar](256) NULL,
+	[maxcpu] [varchar](256) NULL,
+	[maxmem] [varchar](256) NULL,
+	[maxmempool] [varchar](256) NULL,
+	[minmempool] [varchar](256) NULL,
+	[name] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+CREATE TABLE [dbo].[mountpointsettings](
+	[serverid] [varchar](256) NOT NULL,
+	[name] [varchar](256) NULL,
+	[path] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+CREATE TABLE [dbo].[plansettings](
+	[serverid] [varchar](256) NOT NULL,
+	[planid] [varchar](256) NULL,
+	[displayname] [varchar](256) NULL,
+	[state] [varchar](256) NULL,
+	[subcount] [varchar](256) NULL,
+	[timestamp] [datetime] NULL
+) ON [PRIMARY]
+
+GO
+
+CREATE TABLE [dbo].[subsettings](
+	[serverid] [varchar](256) NOT NULL,
+	[name] [varchar](256) NULL,
+	[state] [varchar](256) NULL,
+	[planid] [varchar](256) NULL,
+	[subid] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+CREATE TABLE [dbo].[vhdxsettings](
+	[serverid] [varchar](256) NOT NULL,
+	[name] [varchar](256) NULL,
+	[size] [varchar](256) NULL,
+	[host] [varchar](256) NULL,
+	[path] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+CREATE TABLE [dbo].[vmmdisksettings](
+	[serverid] [varchar](256) NOT NULL,
+	[diskname] [varchar](256) NULL,
+	[size] [varchar](256) NULL,
+	[timestamp] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
