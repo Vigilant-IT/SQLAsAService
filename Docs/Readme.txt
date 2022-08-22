@@ -1,4 +1,4 @@
-HP WAP GATEWAY ReadMe File.
+WAP GATEWAY ReadMe File.
 Author: Wil Taylor and Steve Hosking from Vigilant.IT
 
 
