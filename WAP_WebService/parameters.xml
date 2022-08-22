@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<parameters>
+  <parameter name="GWDB"
+  description="Database name."
+  defaultValue="GW"
+  tags="">
+    <parameterEntry
+      kind="XmlFile"
+      scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$"
+      match="//setting[@name='GWDB']/value/text()" />
+  </parameter>
+
+  <parameter name="GWSQLServer"
+description="SQL server name."
+defaultValue="hpgateway.domain.local"
+tags="">
+    <parameterEntry
+      kind="XmlFile"
+      scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$"
+      match="//setting[@name='GWSQLServer']/value/text()" />
+  </parameter>
+
+  <parameter name="VerboseLogging"
+description="Enable verbose logging."
+defaultValue="false"
+tags="">
+    <parameterEntry
+      kind="XmlFile"
+      scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$"
+      match="//setting[@name='VerboseLogging']/value/text()" />
+  </parameter>
+
+  <parameter name="LogPath"
+description="Folder logs are created in."
+defaultValue="false"
+tags="">
+    <parameterEntry
+      kind="XmlFile"
+      scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$"
+      match="//setting[@name='LogPath']/value/text()" />
+  </parameter>
+
+  <parameter name="CreateGroup"
+description="Name of Active Directory group which grants users the ability to create databases."
+defaultValue="RitCreate"
+tags="">
+    <parameterEntry
+      kind="XmlFile"
+      scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$"
+      match="//setting[@name='CreateGroup']/value/text()" />
+  </parameter>
+
+  <parameter name="StatusGroup"
+description="Name of Active Directory group which grants users the ability to check status of jobs."
+defaultValue="RitStatus"
+tags="">
+    <parameterEntry
+      kind="XmlFile"
+      scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$"
+      match="//setting[@name='StatusGroup']/value/text()" />
+  </parameter>
+
+  <parameter name="DeleteGroup"
+description="Name of Active Directory group which grants users the ability to check status of jobs."
+defaultValue="RitDelete"
+tags="">
+    <parameterEntry
+      kind="XmlFile"
+      scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$"
+      match="//setting[@name='DeleteGroup']/value/text()" />
+  </parameter>
+</parameters>

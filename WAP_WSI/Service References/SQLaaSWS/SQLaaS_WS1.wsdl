@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://SQLaaSWS" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://SQLaaSWS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://SQLaaSWS">
+      <s:element name="RitNewRg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strRgName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strZone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAvail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSqlVer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEnv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTde" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSkuName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassPhrase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strState" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RitNewRgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RitNewRgResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RitRgReqStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strRgName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RitRgReqStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RitRgReqStatusResult" type="tns:ArrayOfRgReq" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfRgReq">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RgReq" nillable="true" type="tns:RgReq" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RgReq">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RgId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RgName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Avail" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SqlVer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dc" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Env" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tde" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SkuName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PassPhrase" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReqTime" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RitNewDb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strRgId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDbName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCollation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDboGrp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPwrGrp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStdGrp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSize" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strState" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RitNewDbResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RitNewDbResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RitDbReqStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDbName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RitDbReqStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RitDbReqStatusResult" type="tns:ArrayOfDbReq" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDbReq">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DbReq" nillable="true" type="tns:DbReq" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DbReq">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RgId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DbName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Collation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ListenerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DboGrp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PwrGrp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StdGrp" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Size" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AogName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ip" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConnectionString" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RitEventStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sDbName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RitEventStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RitEventStatusResult" type="tns:ArrayOfAuditEntry" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAuditEntry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AuditEntry" nillable="true" type="tns:AuditEntry" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AuditEntry">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DBName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SQLVer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InitialSizeMB" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Colation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Network" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Availability" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sku" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StorPerfData" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StorPerfLogs" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Retention" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BUDI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DBoGroup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Recovery" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TDE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Connection" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Logged" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Expire" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PwrUGroup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StdUGroup" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestITID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RitGetValidPram">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sField" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RitGetValidPramResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RitGetValidPramResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueueDBDelete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDBName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueueDBDeleteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="whoami">
+        <s:complexType />
+      </s:element>
+      <s:element name="whoamiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="whoamiResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RitNewRgSoapIn">
+    <wsdl:part name="parameters" element="tns:RitNewRg" />
+  </wsdl:message>
+  <wsdl:message name="RitNewRgSoapOut">
+    <wsdl:part name="parameters" element="tns:RitNewRgResponse" />
+  </wsdl:message>
+  <wsdl:message name="RitRgReqStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:RitRgReqStatus" />
+  </wsdl:message>
+  <wsdl:message name="RitRgReqStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:RitRgReqStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="RitNewDbSoapIn">
+    <wsdl:part name="parameters" element="tns:RitNewDb" />
+  </wsdl:message>
+  <wsdl:message name="RitNewDbSoapOut">
+    <wsdl:part name="parameters" element="tns:RitNewDbResponse" />
+  </wsdl:message>
+  <wsdl:message name="RitDbReqStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:RitDbReqStatus" />
+  </wsdl:message>
+  <wsdl:message name="RitDbReqStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:RitDbReqStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="RitEventStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:RitEventStatus" />
+  </wsdl:message>
+  <wsdl:message name="RitEventStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:RitEventStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="RitGetValidPramSoapIn">
+    <wsdl:part name="parameters" element="tns:RitGetValidPram" />
+  </wsdl:message>
+  <wsdl:message name="RitGetValidPramSoapOut">
+    <wsdl:part name="parameters" element="tns:RitGetValidPramResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueueDBDeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:QueueDBDelete" />
+  </wsdl:message>
+  <wsdl:message name="QueueDBDeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:QueueDBDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="whoamiSoapIn">
+    <wsdl:part name="parameters" element="tns:whoami" />
+  </wsdl:message>
+  <wsdl:message name="whoamiSoapOut">
+    <wsdl:part name="parameters" element="tns:whoamiResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SQLaaS_WSSoap">
+    <wsdl:operation name="RitNewRg">
+      <wsdl:input message="tns:RitNewRgSoapIn" />
+      <wsdl:output message="tns:RitNewRgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RitRgReqStatus">
+      <wsdl:input message="tns:RitRgReqStatusSoapIn" />
+      <wsdl:output message="tns:RitRgReqStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RitNewDb">
+      <wsdl:input message="tns:RitNewDbSoapIn" />
+      <wsdl:output message="tns:RitNewDbSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RitDbReqStatus">
+      <wsdl:input message="tns:RitDbReqStatusSoapIn" />
+      <wsdl:output message="tns:RitDbReqStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RitEventStatus">
+      <wsdl:input message="tns:RitEventStatusSoapIn" />
+      <wsdl:output message="tns:RitEventStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RitGetValidPram">
+      <wsdl:input message="tns:RitGetValidPramSoapIn" />
+      <wsdl:output message="tns:RitGetValidPramSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueueDBDelete">
+      <wsdl:input message="tns:QueueDBDeleteSoapIn" />
+      <wsdl:output message="tns:QueueDBDeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:input message="tns:GetVersionSoapIn" />
+      <wsdl:output message="tns:GetVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="whoami">
+      <wsdl:input message="tns:whoamiSoapIn" />
+      <wsdl:output message="tns:whoamiSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SQLaaS_WSSoap" type="tns:SQLaaS_WSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RitNewRg">
+      <soap:operation soapAction="https://SQLaaSWS/RitNewRg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RitRgReqStatus">
+      <soap:operation soapAction="https://SQLaaSWS/RitRgReqStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RitNewDb">
+      <soap:operation soapAction="https://SQLaaSWS/RitNewDb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RitDbReqStatus">
+      <soap:operation soapAction="https://SQLaaSWS/RitDbReqStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RitEventStatus">
+      <soap:operation soapAction="https://SQLaaSWS/RitEventStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RitGetValidPram">
+      <soap:operation soapAction="https://SQLaaSWS/RitGetValidPram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueDBDelete">
+      <soap:operation soapAction="https://SQLaaSWS/QueueDBDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap:operation soapAction="https://SQLaaSWS/GetVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="whoami">
+      <soap:operation soapAction="https://SQLaaSWS/whoami" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SQLaaS_WSSoap12" type="tns:SQLaaS_WSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RitNewRg">
+      <soap12:operation soapAction="https://SQLaaSWS/RitNewRg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RitRgReqStatus">
+      <soap12:operation soapAction="https://SQLaaSWS/RitRgReqStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RitNewDb">
+      <soap12:operation soapAction="https://SQLaaSWS/RitNewDb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RitDbReqStatus">
+      <soap12:operation soapAction="https://SQLaaSWS/RitDbReqStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RitEventStatus">
+      <soap12:operation soapAction="https://SQLaaSWS/RitEventStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RitGetValidPram">
+      <soap12:operation soapAction="https://SQLaaSWS/RitGetValidPram" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueueDBDelete">
+      <soap12:operation soapAction="https://SQLaaSWS/QueueDBDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap12:operation soapAction="https://SQLaaSWS/GetVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="whoami">
+      <soap12:operation soapAction="https://SQLaaSWS/whoami" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SQLaaS_WS">
+    <wsdl:port name="SQLaaS_WSSoap" binding="tns:SQLaaS_WSSoap">
+      <soap:address location="https://sqlaas.lab/SQLaaS_WS.ASMX" />
+    </wsdl:port>
+    <wsdl:port name="SQLaaS_WSSoap12" binding="tns:SQLaaS_WSSoap12">
+      <soap12:address location="https://sqlaas.lab/SQLaaS_WS.ASMX" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

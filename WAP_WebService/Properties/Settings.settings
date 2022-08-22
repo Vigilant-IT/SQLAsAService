@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WAP_WebService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GWDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">GW</Value>
+    </Setting>
+    <Setting Name="VerboseLogging" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="GWSQLServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sqlaas.lab</Value>
+    </Setting>
+    <Setting Name="CreateGroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CreateDB</Value>
+    </Setting>
+    <Setting Name="StatusGroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">statusdb</Value>
+    </Setting>
+    <Setting Name="DeleteGroup" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">deletedb</Value>
+    </Setting>
+    <Setting Name="LogPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">c:\temp</Value>
+    </Setting>
+    <Setting Name="GroupDomain" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SQLaaS</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
