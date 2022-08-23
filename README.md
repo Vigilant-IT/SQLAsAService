@@ -6,8 +6,8 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-# HPWAPWebService
-Final Release of the HPE SQLaaS project. Operations & Technology Group Pty Ltd
+# WAP Web Service
+Final Release of the SQLaaS project. Operations & Technology Group Pty Ltd
 As a result of the project coming to a close this is the Final version of the code
 
 This version of the solution contains all of the logic for the Micro and Elstic Databases. as part of this the whole Allocation of resources has been rewritten to better handle the process
